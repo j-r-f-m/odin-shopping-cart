@@ -1,10 +1,11 @@
 import React from "react";
+import HomeBtn from "./HomeBtn";
 
 // components rendes all elements belonging to home
 function Home() {
   return (
     <div id="home--container">
-      <h1>Krasse Statik</h1>
+      <HomeBtn />
     </div>
   );
 }
