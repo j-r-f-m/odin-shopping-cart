@@ -13,7 +13,10 @@ function Header() {
         </li>
         <li>
           {" "}
-          <Link to="" style={{ textDecoration: "none", color: "black" }}>
+          <Link
+            to="/products"
+            style={{ textDecoration: "none", color: "black" }}
+          >
             Products
           </Link>
         </li>

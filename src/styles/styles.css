@@ -171,24 +171,30 @@ li {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
   grid-template-rows: repeat(12, [row-start] 1fr);
+
+  background: url("../images/wood.jpg") no-repeat center center;
 }
 
 #home--container {
-  grid-row: 3;
+  grid-row: 3 / auto;
   grid-column: 2/ 6;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   background-color: lightgray;
   border-radius: 10px;
+  min-width: 17rem;
 }
 
 p {
   padding: 2rem;
+  min-width: 15rem;
 }
 
 #btn--home {
   margin: 0rem 2rem 1rem 2rem;
   padding: 0.5rem;
+  width: 15rem;
 }
