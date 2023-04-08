@@ -232,3 +232,11 @@ h1,
 .card--price {
   padding: 1rem;
 }
+
+.shopping--container {
+  grid-row: 3;
+  grid-column: 4/ 10;
+
+  display: flex;
+  justify-content: center;
+}

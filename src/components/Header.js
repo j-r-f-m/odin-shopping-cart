@@ -22,7 +22,7 @@ function Header() {
         </li>
         <li>
           {" "}
-          <Link to="" style={{ textDecoration: "none", color: "black" }}>
+          <Link to="/cart" style={{ textDecoration: "none", color: "black" }}>
             Shopping Cart
           </Link>
         </li>
