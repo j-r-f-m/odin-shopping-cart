@@ -101,6 +101,39 @@ function App() {
       id: uniqid(),
     },
   ]);
+
+  /**
+   * add product to cart
+   * @param {object} e event object
+   */
+  const addToCart = (e) => {
+    const cardId = e.target.id;
+    console.log(cardId);
+
+    setProductCards(
+      productCards.map((card) => {
+        if (card.id === cardId) {
+          return { ...card, amount: card.amount + 1 };
+        }
+        return card;
+      })
+    );
+  };
+
+  const takeFromCart = (e) => {
+    const cardId = e.target.id;
+    console.log(cardId);
+
+    setProductCards(
+      productCards.map((card) => {
+        if (card.id === cardId) {
+          return { ...card, amount: card.amount - 1 };
+        }
+        return card;
+      })
+    );
+  };
+
   return (
     <div className="App">
       {/* header will always be visible */}
@@ -109,9 +142,20 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route
           path="/products"
-          element={<Products productCards={productCards} />}
+          element={
+            <Products productCards={productCards} addToCart={addToCart} />
+          }
         />
-        <Route path="/cart" element={<Shopping />} />
+        <Route
+          path="/cart"
+          element={
+            <Shopping
+              productCards={productCards}
+              addToCart={addToCart}
+              takeFromCart={takeFromCart}
+            />
+          }
+        />
       </Routes>
     </div>
   );

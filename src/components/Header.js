@@ -7,13 +7,18 @@ function Header() {
       <h1>Structures</h1>
       <ul id="link--container">
         <li>
-          <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+          <Link
+            className="header--link"
+            to="/"
+            style={{ textDecoration: "none", color: "black" }}
+          >
             Home
           </Link>
         </li>
         <li>
           {" "}
           <Link
+            className="header--link"
             to="/products"
             style={{ textDecoration: "none", color: "black" }}
           >
@@ -22,7 +27,11 @@ function Header() {
         </li>
         <li>
           {" "}
-          <Link to="/cart" style={{ textDecoration: "none", color: "black" }}>
+          <Link
+            className="header--link"
+            to="/cart"
+            style={{ textDecoration: "none", color: "black" }}
+          >
             Shopping Cart
           </Link>
         </li>
